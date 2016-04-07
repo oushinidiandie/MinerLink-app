@@ -1,2 +1,0 @@
-# MinerLink-app
-app

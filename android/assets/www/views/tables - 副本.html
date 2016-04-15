@@ -1,0 +1,133 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>Tables</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+	<!-- Bootstrap Core CSS -->
+	<link href="/stylesheets/tables/bootstrap.css" rel='stylesheet' type='text/css'/>
+	<!-- Custom CSS -->
+	<link href="/stylesheets/tables/style.css" rel='stylesheet' type='text/css' />
+	<!-- font-awesome icons -->
+	<link href="/stylesheets/font-awesome.css" rel="stylesheet">
+	<!-- //font-awesome icons -->
+	<!-- Metis Menu -->
+	<script src="/javascripts/tables/metisMenu.min.js"></script>
+	<script src="/javascripts/tables/custom.js"></script>
+	<link href="/stylesheets/tables/custom.css" rel="stylesheet">
+	<!--//Metis Menu -->
+</head>
+<body class="cbp-spmenu-push">
+	<div class="main-content">
+		<!-- header-starts -->
+		<div class="sticky-header header-section ">
+			<div class="header-left">
+				<!--toggle button start-->
+				<button id="showLeftPush"> <i class="fa fa-bars"></i>
+				</button>
+			</div>
+		</div>
+		<!-- //header-ends -->
+		<!-- main content start-->
+		<div id="page-wrapper">
+			<div class="main-page">
+				<div class="tables">
+					<div class="table-responsive bs-example widget-shadow">
+						<h4>矿机列表:</h4>
+						<table class="table table-bordered">
+							<thead>
+								<tr>
+									<th>#</th>
+									<th>ID</th>
+									<th>NAME</th>
+									<th>TYPE</th>
+									<th>ID</th>
+									<th>NAME</th>
+									<th>TYPE</th>
+									<th>ID</th>
+									<th>NAME</th>
+									<th>TYPE</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<%jss.data.forEach(function(js){%>
+
+									<td><%=js.id%></td>
+
+									<% })%>
+								</tr>
+								<tr>
+									<%jss.data.forEach(function(js){%>
+
+									<td><%=js.id%></td>
+
+									<% })%>
+								</tr>
+								<tr>
+									<%jss.data.forEach(function(js){%>
+
+									<td><%=js.id%></td>
+
+									<% })%>
+								</tr>
+								<tr>
+									<%jss.data.forEach(function(js){%>
+
+									<td><%=js.id%></td>
+
+									<% })%>
+								</tr>
+								<tr>
+									<%jss.data.forEach(function(js){%>
+
+									<td><%=js.id%></td>
+
+									<% })%>
+								</tr>
+								<tr>
+									<%jss.data.forEach(function(js){%>
+
+									<td><%=js.id%></td>
+
+									<% })%>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--footer-->
+		<div class="footer">
+			<p>
+				&copy; 2016 Admin TX. Design by
+				<a href="#" target="_blank">MinerLink</a>
+			</p>
+		</div>
+		<!--//footer-->
+	</div>
+	<!-- Classie -->
+	<script src="/javascripts/tables/classie.js"></script>
+	<script>
+		var menuLeft = document.getElementById( 'cbp-spmenu-s1' ),
+			showLeftPush = document.getElementById( 'showLeftPush' ),
+			body = document.body;
+
+		showLeftPush.onclick = function() {
+			classie.toggle( this, 'active' );
+			classie.toggle( body, 'cbp-spmenu-push-toright' );
+			classie.toggle( menuLeft, 'cbp-spmenu-open' );
+			disableOther( 'showLeftPush' );
+		};
+
+		function disableOther( button ) {
+			if( button !== 'showLeftPush' ) {
+				classie.toggle( showLeftPush, 'disabled' );
+			}
+		}
+	</script>
+	<!-- //Classie -->
+</body>
+</html>
